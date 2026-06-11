@@ -12,6 +12,16 @@ const config: StorybookConfig = {
   features: {
     sidebarOnboardingChecklist: false,
   },
+  staticDirs: ["../public"],
+  core: {
+    disableTelemetry: true,
+  },
+  viteFinal: async (config) => {
+    return {
+      ...config,
+      base: "/storybook/",
+    };
+  },
 };
 
 export default config;
