@@ -67,11 +67,21 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {},
+  args: {
+    children: defaultListItems,
+  },
 };
 
 export const DisabledItems: Story = {
-  args: {},
+  args: {
+    children: defaultListItems.map((item, index) =>
+      index === 0 || index === 2 ? (
+        <ListItem key={item.key} {...item.props} disabled />
+      ) : (
+        item
+      ),
+    ),
+  },
 };
 
 export const CustomIcons: Story = {

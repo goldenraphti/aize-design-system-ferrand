@@ -9,6 +9,9 @@ const config: StorybookConfig = {
     "@storybook/addon-docs",
   ],
   framework: "@storybook/react-vite",
+  features: {
+    sidebarOnboardingChecklist: false,
+  },
 };
 
 export default config;
