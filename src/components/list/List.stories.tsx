@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { ListItem } from "./list-item";
 import { DocumentBlankIcon, TagIcon } from "../../assets/icons";
+import { userEvent, within, expect, spyOn } from "storybook/test";
 
 import { List } from "./list";
 
@@ -49,6 +50,9 @@ const defaultListItems = [
   />,
 ];
 
+// Spy on console.log
+const consoleSpy = spyOn(console, "log").mockImplementation(() => {});
+
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
   title: "Components/List",
@@ -70,6 +74,16 @@ export const Default: Story = {
   args: {
     children: defaultListItems,
   },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const listItems = canvas.getAllByRole("listitem");
+    const firstItem = listItems[0];
+    const firstItemActionButton = within(firstItem).getByRole("button");
+    expect(firstItem).toHaveAttribute("aria-disabled", "false");
+    expect(firstItemActionButton).not.toBeDisabled();
+    await userEvent.click(firstItemActionButton);
+    expect(consoleSpy).not.toHaveBeenCalledWith("🐠end action🐒");
+  },
 };
 
 export const DisabledItems: Story = {
@@ -81,6 +95,16 @@ export const DisabledItems: Story = {
         item
       ),
     ),
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const listItems = canvas.getAllByRole("listitem");
+    const firstItem = listItems[0];
+    const firstItemActionButton = within(firstItem).getByRole("button");
+    expect(firstItem).toHaveAttribute("aria-disabled", "true");
+    expect(firstItemActionButton).toBeDisabled();
+    await userEvent.click(firstItemActionButton);
+    expect(consoleSpy).not.toHaveBeenCalledWith("🐠end action🐒");
   },
 };
 
@@ -100,10 +124,28 @@ export const LongHiddenList: Story = {
   args: {
     maxItemsBeforeCrop: 2,
   },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const listItems = canvas.getAllByRole("listitem");
+    expect(listItems).not.toHaveLength(7);
+    const expandButton = canvas.queryByRole("button", {
+      name: /view all documents/i,
+    });
+    expect(expandButton).toBeInTheDocument();
+  },
 };
 
 export const LongUncroppedList: Story = {
   args: {
     showAllNoCropButton: true,
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const listItems = canvas.getAllByRole("listitem");
+    expect(listItems).toHaveLength(7);
+    const expandButton = canvas.queryByRole("button", {
+      name: /view all documents/i,
+    });
+    expect(expandButton).not.toBeInTheDocument();
   },
 };
