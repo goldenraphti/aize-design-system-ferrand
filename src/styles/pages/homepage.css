@@ -1,0 +1,15 @@
+body {
+    background-color: var(--color-surface);
+    color: var(--color-text-primary);
+    font-family: "Noto Sans", "Arial", sans-serif;
+    min-height: 100vh;
+
+}
+
+.presentation-homepage {
+  padding: var(--spacing-32);
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  min-height: 100vh;
+}

@@ -12,7 +12,6 @@ export type ListItemProps = ComponentProps<"li"> & {
   startIcon?: React.ReactNode; // accepts any React component/element
   endAction?: React.MouseEventHandler<HTMLButtonElement>;
   disabled?: boolean;
-  key: string | number;
 };
 
 export const ListItem = ({
@@ -22,7 +21,6 @@ export const ListItem = ({
   endAction = defaultEndAction,
   disabled = false,
   className,
-  key,
   ...props
 }: ListItemProps) => {
   let classNameListItem = clsx(styles.listItem, className);
@@ -30,7 +28,6 @@ export const ListItem = ({
   return (
     <li
       className={classNameListItem}
-      key={key}
       aria-disabled={disabled}
       tabIndex={disabled ? -1 : undefined}
     >

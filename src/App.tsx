@@ -1,122 +1,64 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { List } from "./components/list/list";
+import { ListItem } from "./components/list/list-item";
+import { DocumentBlankIcon, TagIcon } from "./assets/icons";
+import "./styles/styles.css";
+import "./styles/pages/homepage.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+    <div className='presentation-homepage'>
+      <List
+        className='max-w-sm'
+        description='Preview or add documents to board'
+        title='Documents'
+      >
+        <ListItem
+          description='Structural analysis report for foundation bearing capacity CS-2847-HV'
+          startIcon={<DocumentBlankIcon />}
+          title='DN02-H5300-P-XB-7102'
+          key='DN02-H5300-P-XB-7102'
+        />
+        <ListItem
+          description='Overview diagram for system 77-R45 lq c789-yui-123456'
+          startIcon={<DocumentBlankIcon />}
+          title='DN02-H5300-P-XB-7103'
+          disabled
+          key='DN02-H5300-P-XB-7103'
+        />
+        <ListItem
+          description='Electrical schematic for main distribution panel MDP-5600-QX'
+          startIcon={<TagIcon />}
+          title='DN02-H5300-P-XB-7104'
+          key='DN02-H5300-P-XB-7104'
+        />
+        <ListItem
+          description='HVAC layout plan with thermal load distribution TLD-3245-NM'
+          startIcon={<DocumentBlankIcon />}
+          title='DN02-H5300-P-XB-7105'
+          key='DN02-H5300-P-XB-7105'
+        />
+        <ListItem
+          description='Reinforced concrete mix design specification RCM-8901-TP'
+          startIcon={<TagIcon />}
+          title='DN02-H5300-P-XB-7106'
+          key='DN02-H5300-P-XB-7106'
+          disabled
+        />
+        <ListItem
+          description='Crane load capacity certification for heavy equipment CLC-7234-RW'
+          startIcon={<DocumentBlankIcon />}
+          title='DN02-H5300-P-XB-7107'
+          key='DN02-H5300-P-XB-7107'
+        />
+        <ListItem
+          description='Safety compliance checklist for fall protection systems FPS-6123-KL'
+          startIcon={<DocumentBlankIcon />}
+          title='DN02-H5300-P-XB-7108'
+          key='DN02-H5300-P-XB-7108'
+        />
+      </List>
+    </div>
+  );
 }
 
-export default App
+export default App;

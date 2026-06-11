@@ -14,6 +14,7 @@
   padding: var(--list-item-padding);
   border-radius: 0.5rem;
   gap: var(--list-item-gap);
+  text-align: start;
 
   &[aria-disabled="true"] {
     background-color: var(--list-item-background-disabled);

@@ -10,6 +10,7 @@
     background-color: var(--color-list-background);
     border-radius: 0.5rem;
     padding: var(--spacing-8);
+    text-align: start;
 
     .presentation {
         display: flex;
