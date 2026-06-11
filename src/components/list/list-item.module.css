@@ -28,7 +28,7 @@
     }
   }
 
-  &:not(:disabled):hover {
+  &:not([aria-disabled]):hover {
     background-color: var(--list-item-background-hover);
   }
 

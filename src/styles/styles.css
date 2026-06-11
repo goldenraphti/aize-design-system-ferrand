@@ -18,5 +18,8 @@ svg {
 
 button {
     border: none;
-    cursor: pointer;
+
+    &:not(:disabled) {
+        cursor: pointer;
+    }
 }

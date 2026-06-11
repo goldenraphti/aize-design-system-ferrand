@@ -76,7 +76,7 @@ export const DisabledItems: Story = {
   args: {
     children: defaultListItems.map((item, index) =>
       index === 0 || index === 2 ? (
-        <ListItem key={item.key} {...item.props} disabled />
+        <ListItem key={item.key} {...item.props} disabled='true' />
       ) : (
         item
       ),
@@ -85,7 +85,15 @@ export const DisabledItems: Story = {
 };
 
 export const CustomIcons: Story = {
-  args: {},
+  args: {
+    children: defaultListItems.map((item, index) =>
+      index === 0 || index === 2 ? (
+        <ListItem key={item.key} {...item.props} startIcon={<TagIcon />} />
+      ) : (
+        item
+      ),
+    ),
+  },
 };
 
 export const LongHiddenList: Story = {
