@@ -21,7 +21,6 @@ export const List = ({
   maxItemsBeforeCrop = 5,
   showAllNoCropButton,
   className,
-  ...props
 }: ListProps) => {
   const numberItems = Array.isArray(children) ? children.length : 1;
   const [hasHiddenListItems, setHasHiddenListItems] = useState(
