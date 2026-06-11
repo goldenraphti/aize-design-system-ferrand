@@ -21,7 +21,6 @@ export const ListItem = ({
   endAction = defaultEndAction,
   disabled = false,
   className,
-  ...props
 }: ListItemProps) => {
   let classNameListItem = clsx(styles.listItem, className);
 
