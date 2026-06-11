@@ -31,6 +31,7 @@
   - Fonts
     - Brand font is sans serif, but sharp techy angles, reminding me a bit of the fonts of JetBrains or WeAreMartians.
     - e.g. Headline font = Karelia ("pay to use" font) ; body font = "Noto Sans" (Google font)
+      - I took the liberty of putting "Notos Sans" without importing it. So if the user already has it then it's used. I made sure to double-check what was actually used on the screenshot-reference. And it actually is Noto Sans and NOT Arial (see [here](http://www.identifont.com/differences?first=Arial&second=Noto+Sans&q=Go))
   - Very round border-radius.
   - Transitions are not very dynamic. They exist, but I'd say like some "ease-in-out", I don't think there any linear-timing-functions used to make it more "real world springy".
   - is There a light/dark theme ? on the marketing website the answer is "no". But in the assignment it's clearly a dark mode. I'm unsure if it's a toggable theme or if it's a dark mode only product. I went with the 1st option in mind, even though I clearly only focused on the dark mode in the assignment.
@@ -67,6 +68,7 @@
 
 ##### Phase 2: polish and extra features
 
+- create a Button component and refactor the ListItem consuming it.
 - then, once the basic components are implemented, I focused on the "interaction feeling" and the "liveliness" of the components, by adding some transitions and animations to make them more "real world" and less static.
 - review A11y (accessibility) even though it's thought through from the start
   - make sure no-motion
@@ -77,6 +79,7 @@
 
 ##### Phase 3: next steps
 
+- use CSS layers before release v1
 - review performance
 - improve TS
 - write E2E tests with Playwright

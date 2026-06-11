@@ -3,19 +3,18 @@
 
 /* TODO: this would get moved to its own tokens files (typography, etc) or components CSS modules */
 :root {
+  --size-icon: 20px;
 
---size-icon: 20px;
+  --font-size-sm: 12px;
+  --font-size-md: 14px;
+  --font-weight-regular: 400;
+  --line-height-sm: 16px;
+  --line-height-md: 20px;
 
---font-size-sm: 12px;
---font-size-md: 14px;
---font-weight-regular: 400;
---line-height-sm: 16px;
---line-height-md: 20px;
-
-/* TODO: this should move to its own button component */
-    --button-background: var(--color-gray-5);
-    --button-background-hover: var(--color-gray-4);
-    --button-background-disabled: transparent;
-    --button-padding: var(--spacing-2);
+  /* TODO: this should move to its own button component */
+  --button-background: var(--color-gray-5);
+  --button-background-hover: var(--color-gray-4);
+  --button-background-disabled: transparent;
+  --button-padding: var(--spacing-2);
 
 }

@@ -1,9 +1,10 @@
+@import "./reset.css";
 @import "./tokens/tokens.css";
 
 body {
     background-color: var(--color-surface);
     color: var(--color-text-primary);
-    font-family: "Arial", sans-serif;
+    font-family: "Noto Sans", "Arial", sans-serif;
 }
 
 svg {
