@@ -1,46 +1,4 @@
-:root {
-    --color-gray-1: #f3f3f3;
-    --color-gray-2: #cececf;
-    --color-gray-3: #535356;
-    --color-gray-4: #686869;
-    --color-gray-5: #525252;
-    --color-gray-6: #1b1b1c;
-
-    --color-white-alpha-5: #ffffff0d;
-
-    --spacing-2: 2px;
-    --spacing-4: 4px;
-    --spacing-8: 8px;
-
-    --size-icon: 20px;
-
-    --font-size-sm: 12px;
-    --font-size-md: 14px;
-    --font-weight-regular: 400;
-    --line-height-sm: 16px;
-    --line-height-md: 20px;
-
-    --color-text-primary: var(--color-gray-1);
-    --color-text-secondary: var(--color-gray-2);
-    --color-text-disabled: var(--color-gray-3);
-    --color-icon-primary: var(--color-gray-1);
-    --color-icon-secondary: var(--color-gray-2);
-    --color-icon-disabled: var(--color-gray-3);
-    --color-surface: var(--color-gray-6);
-
-    --button-background: var(--color-gray-5);
-    --button-background-hover: var(--color-gray-4);
-    --button-background-disabled: transparent;
-    --button-padding: var(--spacing-2);
-
-    --list-gap: var(--spacing-4);
-
-    --list-item-background: transparent;
-    --list-item-background-hover: var(--color-white-alpha-5);
-    --list-item-background-disabled: transparent;
-    --list-item-gap: var(--spacing-8);
-    --list-item-padding: var(--spacing-8);
-}
+@import "./tokens/tokens.css";
 
 body {
     background-color: var(--color-surface);
@@ -51,18 +9,5 @@ body {
 svg {
     height: var(--size-icon);
     width: var(--size-icon);
-}
-
-.title {
-    color: var(--color-text-primary);
-    font-size: var(--font-size-md);
-    font-weight: var(--font-weight-regular);
-    line-height: var(--line-height-md);
-}
-
-.description {
-    color: var(--color-text-secondary);
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-regular);
-    line-height: var(--line-height-sm);
+    color: var(--color-gray-1);
 }

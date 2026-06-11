@@ -48,6 +48,10 @@
 - TS
 - E2E testing = Playwright
 - Storybook
+- add prettier
+- add stylint
+- add editorconfig
+- probably add recommended VSCode extensions if work with more people
 
 #### Implementation timeline
 
@@ -83,6 +87,8 @@
 ### Main next steps
 
 - in an actual production work I'd discuss with designers etc to decide the documentation for guidelines, etc to add to the documentation
+
+- I whish with more time I could import svgs as React component, to be able to use them as icons in the components. I went with a simple img tag for now, but it would be great to be able to use them as React components, to be able to style them with CSS, etc.
 
 ### Christmas wishlist
 

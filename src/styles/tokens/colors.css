@@ -1,0 +1,18 @@
+:root {
+    --color-gray-1: #f3f3f3;
+    --color-gray-2: #cececf;
+    --color-gray-3: #535356;
+    --color-gray-4: #686869;
+    --color-gray-5: #525252;
+    --color-gray-6: #1b1b1c;
+
+    --color-white-alpha-5: #ffffff0d;
+
+    --color-text-primary: var(--color-gray-1);
+    --color-text-secondary: var(--color-gray-2);
+    --color-text-disabled: var(--color-gray-3);
+    --color-icon-primary: var(--color-gray-1);
+    --color-icon-secondary: var(--color-gray-2);
+    --color-icon-disabled: var(--color-gray-3);
+    --color-surface: var(--color-gray-6);
+}
