@@ -35,6 +35,8 @@
   & div {
     display: flex;
     flex-direction: column;
+    max-width: 100%;
+    overflow: auto;
   }
 
   .title {
@@ -49,6 +51,10 @@
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-regular);
     line-height: var(--line-height-sm);
+
+    white-space: nowrap;
+    overflow: clip;
+    text-overflow: ellipsis;
   }
 
   .button {

@@ -3,6 +3,7 @@ import { DocumentBlankIcon } from "../../assets/icons";
 
 import { ListItem } from "./list-item";
 
+// TODO: always wrap the previewed list item inside a <List> element
 const meta = {
   title: "Components / ListItem",
   component: ListItem,

@@ -1,5 +1,6 @@
 @import "./reset.css";
 @import "./tokens/tokens.css";
+@import "./utilities";
 
 body {
     background-color: var(--color-surface);
@@ -9,6 +10,13 @@ body {
 
 svg {
     height: var(--size-icon);
+    min-height: var(--size-icon);
     width: var(--size-icon);
+    min-width: var(--size-icon);
     color: var(--color-gray-1);
+}
+
+button {
+    border: none;
+    cursor: pointer;
 }

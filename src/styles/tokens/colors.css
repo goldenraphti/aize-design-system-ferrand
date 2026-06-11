@@ -6,6 +6,8 @@
     --color-gray-5: #525252;
     --color-gray-6: #1b1b1c;
 
+    --color-green-1: #86e959;
+
     --color-white-alpha-5: #ffffff0d;
 
     --color-text-primary: var(--color-gray-1);
@@ -15,4 +17,5 @@
     --color-icon-secondary: var(--color-gray-2);
     --color-icon-disabled: var(--color-gray-3);
     --color-surface: var(--color-gray-6);
+    --color-button-text-primary: var(--color-green-1);
 }

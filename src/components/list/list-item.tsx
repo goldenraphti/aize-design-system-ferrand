@@ -1,11 +1,7 @@
 import type { ComponentProps } from "react";
 import clsx from "clsx";
 import styles from "./list-item.module.css";
-import { AddIcon, DocumentBlankIcon, TagIcon } from "../../assets/icons";
-
-// each list-item should support a disabled state
-
-// style a hover state for each list-item
+import { AddIcon, TagIcon } from "../../assets/icons";
 
 const defaultStartIcon = <TagIcon />;
 const defaultEndAction = () => console.log("🐠end action🐒");

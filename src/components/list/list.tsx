@@ -1,5 +1,5 @@
-import type { ComponentProps, PropsWithChildren } from "react";
-// import clsx from "clsx";
+import { type ComponentProps, type PropsWithChildren, useState } from "react";
+import clsx from "clsx";
 import styles from "./list.module.css";
 
 import { ListItem } from "./list-item";
@@ -13,12 +13,52 @@ import { ListItem } from "./list-item";
 // also as props the title and description of the list
 // a possibility would also be to decide wether the list is ordered or unordered
 
-export const List = ({}) => {
+export type ListProps = ComponentProps<"ul"> & {
+  title: string;
+  description?: string;
+  children: React.ReactElement<React.ComponentProps<typeof ListItem>>[];
+  maxItemsBeforeCrop?: number;
+  showAllNoCropButton?: boolean;
+};
+
+export const List = ({
+  children,
+  maxItemsBeforeCrop = 5,
+  showAllNoCropButton,
+  className,
+  ...props
+}: ListProps) => {
+  const numberItems = Array.isArray(children) ? children.length : 1;
+  const [hasHiddenListItems, setHasHiddenListItems] = useState(
+    !showAllNoCropButton && numberItems > maxItemsBeforeCrop,
+  ); // This should be determined based on the actual number of list items and the initial view limit
+
+  let classNameListContainer = clsx(styles.listContainer, className);
+
+  function handleViewAllClick() {
+    setHasHiddenListItems(false);
+  }
+
   return (
-    <ul className={styles.list}>
-      <ListItem>Item 1</ListItem>
-      <ListItem>Item 2</ListItem>
-      <ListItem>Item 3</ListItem>
-    </ul>
+    <div className={classNameListContainer}>
+      <div className={styles.presentation}>
+        <h2 className={styles.title}>{props.title}</h2>
+        {props.description && (
+          <p className={styles.description}>{props.description}</p>
+        )}
+      </div>
+      <ul className={styles.list}>
+        {[...children].map((itemChild, i) => {
+          if (i < maxItemsBeforeCrop || !hasHiddenListItems) {
+            return itemChild;
+          }
+        })}
+      </ul>
+      {hasHiddenListItems && (
+        <button className={styles.viewAllButton} onClick={handleViewAllClick}>
+          View all documents
+        </button>
+      )}
+    </div>
   );
 };

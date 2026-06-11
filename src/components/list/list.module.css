@@ -1,5 +1,43 @@
 @import "../../styles/tokens/tokens.css";
 
-.list {
+.listContainer {
     --list-gap: var(--spacing-4);
+    --color-list-background: color-mix(in oklab, var(--color-surface) 95%, var(--color-gray-1));
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--list-gap);
+    background-color: var(--color-list-background);
+    border-radius: 0.5rem;
+    padding: var(--spacing-8);
+
+    .presentation {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-4);
+        padding: var(--spacing-8);
+    }
+
+    .list {
+        padding: 0;
+    }
+
+    .title {
+        font-size: var(--font-size-xl);
+    }
+
+    .description {
+        font-size: var(--font-size-md);
+        color: var(--color-text-secondary);
+    }
+
+    .viewAllButton {
+        border: none;
+        background: none;
+        color: var(--color-button-text-primary);
+
+        &:hover {
+            color: color-mix(in oklab, var(--color-button-text-primary) 70%, transparent);
+        }
+    }
 }

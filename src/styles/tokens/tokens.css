@@ -7,9 +7,11 @@
 
   --font-size-sm: 12px;
   --font-size-md: 14px;
+  --font-size-lg: 1rem;
+  --font-size-xl: 1.25rem;
   --font-weight-regular: 400;
-  --line-height-sm: 16px;
-  --line-height-md: 20px;
+  --line-height-sm: 1rem;
+  --line-height-md: 1.25rem;
 
   /* TODO: this should move to its own button component */
   --button-background: var(--color-gray-5);
