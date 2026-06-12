@@ -11,7 +11,7 @@ function App() {
         <section>
           <List
             className='max-w-sm'
-            description='Preview or add documents to board'
+            description="Click to log a basic message to your browser's console"
             title='Documents'
           >
             <ListItem
