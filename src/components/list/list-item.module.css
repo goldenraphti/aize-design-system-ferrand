@@ -29,7 +29,7 @@
     }
   }
 
-  &:not([aria-disabled]):hover {
+  &:not([aria-disabled="true"]):hover {
     background-color: var(--list-item-background-hover);
   }
 

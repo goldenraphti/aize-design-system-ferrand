@@ -29,6 +29,10 @@ export const List = ({
 
   let classNameListContainer = clsx(styles.listContainer, className);
 
+  // TODO: this should take an optional function provided by parent component, to fetch more items,
+  // or to show all the items, etc. depending on the use case.
+  // For now it just reveal all the items that were already there,
+  // but in a real world scenario we might want to fetch more items from the server when clicking on "view all".
   function handleViewAllClick() {
     setHasHiddenListItems(false);
   }

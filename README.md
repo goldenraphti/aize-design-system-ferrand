@@ -61,7 +61,7 @@
 
 ### Phase 1: basic implementation
 
-- basic implementation of the components (buttons, inputs, etc) with a focus on the dark mode
+- basic implementation of the components (buttons, etc) with a focus on the dark mode
 - write Storybook stories to build the variants and document the components
   - add variants for the different states (hover, disabled, etc)
   - add component styling
@@ -69,8 +69,14 @@
 - refactor for a good component library system architecture, with a clear tokens system and composable components
 - deploy
 
-### Phase 2: polish and extra features
+### PRESENT: Regrets
 
+- The list component can have a performance issue if the list is long. We might need some to load the list items batch by batch, to avoid too long initial request, etc. Therefore the List component should accept a function that get run when "view all" button gets clicked.
+- The tests asserting the "disabled state" should have been on the ListItem instead of the List.
+
+### FUTURE: Phase 2: polish and extra features
+
+- add some shwadow to the list top or bottom when scrollable to give a hint the user.
 - create a Button component and refactor the ListItem consuming it.
 - make List potentially an "ordered list" (`<ol>`)
 - then, once the basic components are implemented, I would focus on the "interaction feeling" and the "liveliness" of the components, by adding some transitions and animations to make them more "real world" and less static.

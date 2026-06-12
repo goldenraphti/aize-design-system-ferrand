@@ -12,6 +12,7 @@
     padding: var(--spacing-8);
     text-align: start;
     max-width: min(500px, 95vw);
+    max-height: 100%;
 
     .presentation {
         display: flex;
@@ -22,6 +23,7 @@
 
     .list {
         padding: 0;
+        overflow-y: scroll;
     }
 
     .title {

@@ -4,7 +4,7 @@ import styles from "./list-item.module.css";
 import { AddIcon, TagIcon } from "../../assets/icons";
 
 const defaultStartIcon = <TagIcon />;
-const defaultEndAction = () => console.log("🐠end action🐒");
+const defaultEndAction = () => alert("🐠end action🐒");
 
 export type ListItemProps = ComponentProps<"li"> & {
   title: string;
