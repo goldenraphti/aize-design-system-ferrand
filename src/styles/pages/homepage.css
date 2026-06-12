@@ -6,10 +6,20 @@ body {
 
 }
 
+
+
 .presentation-homepage {
   padding: var(--spacing-32);
   display: grid;
   justify-items: center;
-  align-items: start;
+  align-items: spce-between;
   min-height: 100vh;
+}
+
+section.link-storybook {
+  align-self: end;
+
+  & a {
+    color: deeppink;
+  }
 }
