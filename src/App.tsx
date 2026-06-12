@@ -10,7 +10,7 @@ function App() {
       <div className='presentation-homepage'>
         <section>
           <List
-            className='max-w-sm'
+            className='w-sm'
             description="Click to log a basic message to your browser's console"
             title='Documents'
           >
@@ -61,8 +61,10 @@ function App() {
           </List>
         </section>
         <section className='link-storybook'>
-          Give a look at the <a href='./storybook'>Storybook</a> for more
-          details 😉
+          <p>
+            Give a look at the <a href='./storybook'>Storybook</a> for more
+            details 😉
+          </p>
         </section>
       </div>
     </main>

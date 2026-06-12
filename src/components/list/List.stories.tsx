@@ -60,7 +60,7 @@ const meta = {
 
   args: {
     children: defaultListItems,
-    className: "max-w-sm",
+    className: "w-sm",
     title: "Documents",
     description: "Preview or add documents to board",
   },

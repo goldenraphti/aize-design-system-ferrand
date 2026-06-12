@@ -11,6 +11,7 @@
     border-radius: 0.5rem;
     padding: var(--spacing-8);
     text-align: start;
+    max-width: min(500px, 95vw);
 
     .presentation {
         display: flex;
